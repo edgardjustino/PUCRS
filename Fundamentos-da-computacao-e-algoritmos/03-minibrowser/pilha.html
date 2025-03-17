@@ -1,0 +1,36 @@
+<script>
+  //LIFO - stack
+  console.log('Pilha/Stack');
+
+  class BrowserHistoryStack {
+    constructor() {
+      this.cursor = 0;
+      this.data = [];
+    }
+
+    push(item) {
+      //add no final
+      this.cursor = this.cursor + 1;
+      this.data.push(item);
+    }
+    back() {
+      this.data.pop()
+      this.cursor = this.cursor - 1;
+
+    }
+    clear () {
+      this.data = []
+    }
+    print() {
+      console.log(this.data);
+    }
+  }
+
+  const history = new BrowserHistoryStack();
+  history.push('www.google.com');
+  history.push('www.youtube.com');
+  history.push('www.facebook.com');
+  history.print();
+  history.back(); //seria equivalente ao pop(), q tira do final
+  history.print();
+</script>

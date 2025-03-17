@@ -1,0 +1,54 @@
+<script>
+  console.log('[Fila/Queue]');
+  //pessoas(qqr tipo de dado)
+  //uma atrás da outra, a ordem importa
+  //quem entra primeiro, sai primeiro
+
+  let fila = ['script.js', 'style.css', 'imagem.png'];
+
+  //add alguém na fila
+  fila.push('doguinho.png');
+  //remove o primeiro da fila
+  fila.shift();
+
+  //receita pra criar filas
+  // - enqueue(enfileira)  - dequeue(desinfileira)
+
+  //class: receita pra criar objetos
+  class Queue {
+    // qd criarem isso aqui, no constructor, na hora de construir, qd criar toda fila
+    constructor() {
+      //a gente vai ter dados q vai ser um array por padrao
+
+      //e desse array a gente quer pegar e quer salvar ele, associar nessa receita, this, pra receita atual q a gente ta criando, se a gente criar 15 filas, cada uma vai ser uma receita individual, o this sempre vai apontar pro q a gente ta criando
+      this.data = [];
+    }
+    print() {
+      console.log();
+    }
+    enqueue(item) {
+      this.data.push(item);
+      //sempre q copiar e colar códico tomar com cuidado com a referencia
+    }
+
+    dequeue() {
+      this.data.shift()
+    }
+  }
+
+  let requests = new Queue();
+  //nos requests do navegador a gente vai enfileira o primeiro q a gente viu
+  requests.enqueue('script.js');
+  requests.print();
+  requests.dequeue();
+  requests.enqueue('style.css');
+  requests.enqueue('imagem.png');
+  requests.enqueue('doguinho.png');
+
+  //na maioria das linguagens pra cruar um obj vc vai ter uma receita praquede objets. ojb é um conjunto de atributos q representa alguma coisa e métodos(tipo o verbo andar - funcoes)
+
+  //se vc quiser criar um obj a partir de uma receita, a gente chama de class
+</script>
+
+FIFO first in first out
+LIFO last in first out 
