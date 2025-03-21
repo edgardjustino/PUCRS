@@ -7,3 +7,5 @@ function avaliaParidade(limiteSuperior) {
 } //n vai retornar nada
 
 avaliaParidade(10);
+
+//parte 2
