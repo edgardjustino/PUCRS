@@ -31,3 +31,23 @@ class Estudante extends Pessoa {
 const aluno = new Estudante(["Fulano', 'de Tal"], 1990, 'Estudante', 120901);
 
 console.log(aluno);
+
+// class ValidadorCPF {
+//   static validar(tamanho){
+//   if(tamanho == 11){
+//     return true;
+//   }
+//   return false;
+//  }
+// }
+// console.log(ValidadorCPF.validar("12345678901".length));
+class ValidadorCPF {
+  static TAMANHO_CPF = 11; 
+  static validar(tamanho){
+  if(tamanho == this.TAMANHO_CPF){
+    return true;
+  }
+  return false;
+ }
+}
+console.log(ValidadorCPF.validar("12345678901".length));
